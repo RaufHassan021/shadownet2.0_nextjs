@@ -58,13 +58,13 @@ function Header() {
         >
           <li className={isRootPath}>
             {isRootPath && (
-              <span className="text-2xl mr-3 text-shadow">//</span>
+              <span className="text-2xl mr-3 text-shadow">{"//"}</span>
             )}
             <Link href="/">MISSIONS</Link>
           </li>
           <li className={isLeaderBoard}>
             {isLeaderBoard && (
-              <span className="text-2xl mr-3 text-shadow">//</span>
+              <span className="text-2xl mr-3 text-shadow">{"//"}</span>
             )}
             <Link href="/leaderboard">LEADERBOARD</Link>
           </li>
