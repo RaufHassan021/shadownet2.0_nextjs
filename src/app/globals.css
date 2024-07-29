@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "oxanium-font";
+  src: url("/public/assets/fonts/oxanium.ttf");
+}
+
+@font-face {
+  font-family: "bebasNeue-font";
+  src: url("/public/assets/fonts/bebasNeue.ttf");
+}
+
+body {
+  background-color: #000000;
+  max-width: 1700px;
+  min-width: 340px;
+  margin: 0px auto;
+  position: relative;
+  overflow-x: hidden;
+  font-family: "oxanium-font", sans-serif !important;
+}
+
+:root {
+  --orange-color: #e46138;
+}
+
+.oxanium-font {
+  font-family: "oxanium-font", sans-serif !important;
+}
+
+.bebasNeue-font {
+  font-family: "bebasNeue-font", sans-serif !important;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none !important;
+}
+
+.whiteOpacityColor {
+  color: #ffffff;
+  opacity: 40%;
+}
+
+.text-orange {
+  color: var(--orange-color);
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 7.5px #f0f1f2;
+}
+
+.gray_text_shadow {
+  text-shadow: 0px 0px 7.5px #595c5f;
+}
+
+.ant-modal .ant-modal-content {
+  padding: 0px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+.ant-modal {
+  width: 70% !important;
+}
+
+.ant-modal .ant-modal-close-x {
+  color: white !important;
+}
+
+.custom-transform {
+  transform: translate(-50%, -50%) !important;
+}
+
+.menu_boxShadow {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1054px) {
+  .ant-modal {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    max-height: fit-content !important;
+    padding-bottom: 0px !important;
+    top: 0 !important;
+  }
+  .ant-modal .ant-modal-content {
+    border-radius: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ant-modal {
+    margin: 0px !important;
+  }
+}
+
+.linear_bg {
+  background: linear-gradient(
+    90.21deg,
+    #23252b -77.87%,
+    rgba(35, 37, 43, 0) 121.27%
+  );
+}
+
+svg{
+  cursor: pointer !important;
+}
