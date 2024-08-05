@@ -14,7 +14,11 @@ function PMC_ranking() {
   return (
     <div className="w-[99%] md:w-[88%] xl:w-[75%] flex flex-col items-center justify-center h-auto relative">
       <div className="w-auto h-auto flex items-center">
-        <div className="h-full w-[5%] flex flex-col justify-between"><h6></h6></div>
+        <div className="w-[5%] flex flex-col justify-around text-white h-[450px] text-[10px] tracking-[3px] font-bold">
+          <h6 className="rotate-[270deg] mt-4">DOMINION</h6>
+          <h6 className="rotate-[270deg] mb-4">RISING</h6>
+          <h6 className="rotate-[270deg] mt-4">UNWORTHY</h6>
+        </div>
         <ul className="flex items-center justify-between flex-wrap w-[90%] pmc_ranking">
           <li className="flex items-center w-[33%] h-[150px]">
             <div className="flex flex-col items-center">
@@ -101,9 +105,7 @@ function PMC_ranking() {
                 className="w-[50px] object-cover"
               />
               <div className="flex items-center mt-1">
-                <h6 className="text-xl font-black whiteOpacityColor">
-                  4th
-                </h6>
+                <h6 className="text-xl font-black whiteOpacityColor">4th</h6>
               </div>
             </div>
             <div className="flex flex-col ml-1">
@@ -126,9 +128,7 @@ function PMC_ranking() {
                 className="w-[60px] object-cover"
               />
               <div className="flex items-center mt-1">
-                <h6 className="text-xl font-black whiteOpacityColor">
-                  5th
-                </h6>
+                <h6 className="text-xl font-black whiteOpacityColor">5th</h6>
               </div>
             </div>
             <div className="flex flex-col ml-1">
@@ -151,9 +151,7 @@ function PMC_ranking() {
                 className="w-[60px] object-cover"
               />
               <div className="flex items-center mt-1">
-                <h6 className="text-xl font-black whiteOpacityColor">
-                  6th
-                </h6>
+                <h6 className="text-xl font-black whiteOpacityColor">6th</h6>
               </div>
             </div>
             <div className="flex flex-col ml-1">
@@ -176,9 +174,7 @@ function PMC_ranking() {
                 className="w-[50px] object-cover"
               />
               <div className="flex items-center mt-1">
-                <h6 className="text-xl font-black whiteOpacityColor">
-                  7th
-                </h6>
+                <h6 className="text-xl font-black whiteOpacityColor">7th</h6>
               </div>
             </div>
             <div className="flex flex-col ml-1">
@@ -201,9 +197,7 @@ function PMC_ranking() {
                 className="w-[50px] object-cover"
               />
               <div className="flex items-center mt-1">
-                <h6 className="text-xl font-black whiteOpacityColor">
-                  8th
-                </h6>
+                <h6 className="text-xl font-black whiteOpacityColor">8th</h6>
               </div>
             </div>
             <div className="flex flex-col ml-1">
@@ -226,9 +220,7 @@ function PMC_ranking() {
                 className="w-[60px] object-cover"
               />
               <div className="flex items-center mt-1">
-                <h6 className="text-xl font-black whiteOpacityColor">
-                  9th
-                </h6>
+                <h6 className="text-xl font-black whiteOpacityColor">9th</h6>
               </div>
             </div>
             <div className="flex flex-col ml-1">

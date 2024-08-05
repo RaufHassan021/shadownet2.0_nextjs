@@ -149,7 +149,10 @@ button:disabled {
 }
 
 .lvl_boxshadow {
-  box-shadow: 0px 0px 10.3px 0px #ffffff;
+  box-shadow: 1.5px 1.5px 10px rgba(240, 241, 242, 0.7),
+    -1.5px -1.5px 10px rgba(240, 241, 242, 0.7),
+    1.5px -1.5px 10px rgba(240, 241, 242, 0.7),
+    -1.5px 1.5px 10px rgba(240, 241, 242, 0.7);
 }
 
 @media only screen and (max-width: 1024px) {
