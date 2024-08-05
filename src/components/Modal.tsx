@@ -3,6 +3,9 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import SHADOW_IMG from "/public/assets/images/modal_shadow_img.png";
 import SHADOW_LINE from "/public/assets/images/modal_shadowline.png";
+import ORANGE_SHADOW from "/public/assets/images/modal_orange_btm_shdw.png";
+import GREEN_SHADOW from "/public/assets/images/modal_green_btm_shdw.png";
+import RED_SHADOW from "/public/assets/images/modal_red_btm_shdw.png";
 import LORE_TAB_ICON from "/public/assets/images/lore_tab_icon.png";
 import {
   CaretRightOutlined,
@@ -15,6 +18,12 @@ interface MissionModalProps {
   isModalOpen: boolean;
   setIsModalOpen: (value: boolean) => void;
   missionId: number | null;
+}
+
+enum MissionStatus {
+  Incomplete = "incomplete",
+  Completed = "completed",
+  Failed = "failed",
 }
 
 interface mission {
@@ -44,20 +53,20 @@ const MissionModal: React.FC<MissionModalProps> = ({
     if (answer.trim() === mission?.answer.trim()) {
       missions.forEach((obj) => {
         if (obj.id === mission?.id) {
-          obj.status = "completed";
+          obj.status = MissionStatus.Completed;
           setMission({
             ...mission,
-            status: "completed",
+            status: MissionStatus.Completed,
           });
         }
       });
     } else {
       missions.forEach((obj) => {
         if (obj.id === mission?.id) {
-          obj.status = "failed";
+          obj.status = MissionStatus.Failed;
           setMission({
             ...mission,
-            status: "failed",
+            status: MissionStatus.Failed,
           });
         }
       });
@@ -95,7 +104,7 @@ const MissionModal: React.FC<MissionModalProps> = ({
                 color: "white",
               }}
             />
-            <h6 className="gray_text_shadow font-bold text-[13px] text-white tracking-[3px] ml-2">
+            <h6 className="text_shadow font-bold text-[13px] text-white tracking-[3px] ml-2">
               {mission?.type}
             </h6>
           </div>
@@ -103,7 +112,7 @@ const MissionModal: React.FC<MissionModalProps> = ({
             <h5 className="gray_text_shadow text-white uppercase text-shadow font-medium tracking-[7px] text-sm">
               {mission?.category}
             </h5>
-            <h2 className="w-[97%] md:w-9/12 gray_text_shadow uppercase mt-4 text-white bebasNeue-font font-bold text-[35px] leading-[45px] tracking-[.5px] text-center">
+            <h2 className="w-[97%] md:w-9/12 gray_text_shadow uppercase mt-4 text-white bebasNeue-font font-bold text-[50px] leading-[60px] tracking-[2.5px] text-center">
               {mission?.title}
             </h2>
             <Image src={SHADOW_LINE} alt="shadow underline" className="my-11" />
@@ -113,17 +122,36 @@ const MissionModal: React.FC<MissionModalProps> = ({
             ></p>
             <Image src={SHADOW_LINE} alt="shadow underline" className="my-11" />
           </div>
-          <div className="flex py-10 w-full h-auto items-center justify-center bg-[#0E1318]">
-            <div className="flex flex-col w-[97%] md:w-[65%] items-center">
+          <div className="flex py-10 w-full h-auto items-center relative justify-center bg-[#0E1318]">
+            {mission?.status === MissionStatus.Incomplete ? (
+              <Image
+                src={ORANGE_SHADOW}
+                alt="shadow_img"
+                className="absolute bottom-0 right-0 w-full h-auto object-cover"
+              />
+            ) : mission?.status === MissionStatus.Completed ? (
+              <Image
+                src={GREEN_SHADOW}
+                alt="shadow_img"
+                className="absolute bottom-0 right-0 w-full h-auto object-cover"
+              />
+            ) : (
+              <Image
+                src={RED_SHADOW}
+                alt="shadow_img"
+                className="absolute bottom-0 right-0 w-full h-auto object-cover"
+              />
+            )}
+            <div className="flex flex-col w-[97%] md:w-[65%] items-center z-50 relative">
               <Image
                 src={LORE_TAB_ICON}
                 alt="icon"
                 className="w-11 opacity-[25%]"
               />
-              <p className="text-white font-semibold text-2xl text-center tracking-[1px] my-8">
+              <p className="text-white font-semibold text-[26px] text-center tracking-[1px] my-8">
                 {mission?.question}
               </p>
-              {mission?.status === "incomplete" ? (
+              {mission?.status === MissionStatus.Incomplete ? (
                 <>
                   <textarea
                     onChange={(e) => setAnswer(e.target.value)}
@@ -134,12 +162,12 @@ const MissionModal: React.FC<MissionModalProps> = ({
                   <button
                     disabled={!answer.trim()}
                     onClick={sendAnswer}
-                    className="rounded-2xl uppercase bg-[#E46138] w-11/12 py-4 tracking-[1px] font-semibold my-10 text-[20px] text-white"
+                    className="modal_btns_clipPath uppercase bg-[#E46138] w-11/12 py-4 tracking-[1px] font-semibold my-10 text-[20px] text-white"
                   >
                     Send your answer
                   </button>
                 </>
-              ) : mission?.status === "completed" ? (
+              ) : mission?.status === MissionStatus.Completed ? (
                 <>
                   <CheckOutlined
                     style={{
@@ -156,7 +184,7 @@ const MissionModal: React.FC<MissionModalProps> = ({
                   </p>
                   <button
                     onClick={handleClose}
-                    className="rounded-2xl uppercase bg-black w-11/12 py-4 tracking-[1px] font-semibold my-10 text-[20px] text-white"
+                    className="modal_btns_clipPath uppercase bg-black w-11/12 py-4 tracking-[1px] font-semibold my-10 text-[20px] text-white"
                   >
                     Close
                   </button>
@@ -178,7 +206,7 @@ const MissionModal: React.FC<MissionModalProps> = ({
                   </p>
                   <button
                     onClick={handleClose}
-                    className="rounded-2xl uppercase bg-black w-11/12 py-4 tracking-[1px] font-semibold my-10 text-[20px] text-white"
+                    className="modal_btns_clipPath uppercase bg-black w-11/12 py-4 tracking-[1px] font-semibold my-10 text-[20px] text-white"
                   >
                     Close
                   </button>

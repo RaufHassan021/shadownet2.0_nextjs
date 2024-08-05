@@ -15,13 +15,19 @@ import AVATAR6 from "/public/assets/images/leaderboard_avatar6.png";
 import AVATAR7 from "/public/assets/images/leaderboard_avatar7.png";
 import AVATAR8 from "/public/assets/images/leaderboard_avatar8.png";
 
+const MissionStatus = {
+  Incomplete: "incomplete",
+  Completed: "completed",
+  Failed: "failed",
+};
+
 const missions = [
   {
     id: 1,
     title: "LEBENSKRAFT LOREM IPSUM DOLOR SIT AMET",
     category: "GEOGRAPHY",
     type: "WORTH 2,300 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -34,7 +40,7 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "CHARACTER",
     type: "WORTH 2,500 AP",
-    status: "completed",
+    status: MissionStatus.Completed,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -48,7 +54,7 @@ const missions = [
     title: "LEBENSKRAFT LOREM IPSUM DOLOR SIT AMET",
     category: "PMC LORE",
     type: "WORTH 1,800 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -62,7 +68,7 @@ const missions = [
     title: "LEBENSKRAFT LOREM IPSUM DOLOR SIT AMET",
     category: "OTHER RANDOM",
     type: "WORTH 2,000 AP",
-    status: "incomplete",
+    status: MissionStatus.Failed,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -76,7 +82,7 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "GEOGRAPHY",
     type: "WORTH 2,200 AP",
-    status: "completed",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -90,7 +96,7 @@ const missions = [
     title: "LEBENSKRAFT Lorem ipsum dolor sit amet",
     category: "ADVENTURE",
     type: "WORTH 1,900 AP",
-    status: "failed",
+    status: MissionStatus.Failed,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -103,7 +109,7 @@ const missions = [
     title: "LEBENSKRAFT Lorem ipsum dolor sit amet",
     category: "PMC LORE",
     type: "WORTH 2,400 AP",
-    status: "incomplete",
+    status: MissionStatus.Failed,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -117,12 +123,11 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "OTHER RANDOM",
     type: "WORTH 2,100 AP",
-    status: "incomplete",
+    status: MissionStatus.Completed,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
       "Question lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet?",
-
     answer: "answer",
     img: MISSION_BG8,
   },
@@ -131,7 +136,7 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "CHARACTER",
     type: "WORTH 2,500 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -145,7 +150,7 @@ const missions = [
     title: "LEBENSKRAFT LOREM IPSUM DOLOR SIT AMET",
     category: "GEOGRAPHY",
     type: "WORTH 2,300 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -159,7 +164,7 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "ADVENTURE",
     type: "WORTH 2,100 AP",
-    status: "failed",
+    status: MissionStatus.Failed,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -173,7 +178,7 @@ const missions = [
     title: "LEBENSKRAFT LOREM IPSUM DOLOR SIT AMET",
     category: "OTHER RANDOM",
     type: "WORTH 2,300 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -187,7 +192,7 @@ const missions = [
     title: "LEBENSKRAFT LOREM IPSUM DOLOR SIT AMET",
     category: "PMC LORE",
     type: "WORTH 2,100 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -201,7 +206,7 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "CHARACTER",
     type: "WORTH 2,200 AP",
-    status: "completed",
+    status: MissionStatus.Completed,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
@@ -215,12 +220,11 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "PMC LORE",
     type: "WORTH 2,500 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:
       "Question lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet?",
-
     answer: "answer",
     img: MISSION_BG6,
   },
@@ -229,7 +233,7 @@ const missions = [
     title: "OTHER SHORT TITLE",
     category: "GEOGRAPHY",
     type: "WORTH 2,300 AP",
-    status: "incomplete",
+    status: MissionStatus.Incomplete,
     story:
       "Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.</br></br>Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr. Lorem ipsum dolor sit amet et auderem sempre tito te lauda mit andere comarae solo la dolor sit amet. Lorem ipsum dolor sit amet et auderem sempr.",
     question:

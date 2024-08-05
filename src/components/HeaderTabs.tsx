@@ -1,4 +1,3 @@
-import "@/styles/homePage.css";
 import SOCIAL_TAB_ICON from "/public/assets/images/social_tab_icon.png";
 import Image from "next/image";
 import GAMING_TAB_ICON from "/public/assets/images/gaming_tab_icon.png";
@@ -68,14 +67,14 @@ function HeaderTabs({ isMenuOpen }: Menu) {
         ))}
       </ul>
       <div className="flex flex-col items-end justify-end mb-[13px] ml-[200px]">
-        <h5 className="uppercase text-[#ffffff] opacity-[20%] tracking-[.1rem] text-[15px] lg:text-[17px] font-bold">
+        <h5 className="uppercase text-[#ffffff] opacity-[20%] tracking-[.1rem] text-[15px] lg:text-[20px] font-extrabold">
           Shadow Level
         </h5>
-        <div className="flex items-center h-[3px] w-[200px] lg:w-[250px] my-[7px] lg:my-[10px]">
+        <div className="flex items-center h-[5px] w-[200px] lg:w-[250px] my-[7px] lg:my-[10px]">
           <div className="lvl_boxshadow w-[25%] h-full bg-[#FFFFFF]"></div>
           <div className="flex-1 bg-[#353637] h-full"></div>
         </div>
-        <h6 className="text-[12px] lg:text-[15px] font-light whiteOpacityColor tracking-[.1rem]">
+        <h6 className="text-[12px] lg:text-[14px] font-light whiteOpacityColor tracking-[.1rem]">
           lv.25 - SPECIAL AGENT
         </h6>
       </div>

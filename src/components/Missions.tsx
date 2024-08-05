@@ -3,8 +3,14 @@ import React, { useState } from "react";
 import LORE_TAB_ICON from "/public/assets/images/lore_tab_icon.png";
 import MISSION_BG_SHADOW from "../../public/assets/images/mission_bg_shadow.png";
 import { CaretRightOutlined } from "@ant-design/icons";
-import missions from "@/data.js";
+import missions from "@/data";
 import MissionModal from "./Modal";
+
+enum MissionStatus {
+  Incomplete = "incomplete",
+  Completed = "completed",
+  Failed = "failed",
+}
 
 function Missions() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,7 +23,7 @@ function Missions() {
   };
   return (
     <>
-      <div className="mt-[40px] sm:mt-[-3rem] md:mt-[-5rem] lg:mt-[-17rem]">
+      <div className="mt-[40px] sm:mt-[-3rem] md:mt-[-5rem] lg:mt-[-15rem] z-50 relative">
         <span className="uppercase flex items-center mx-10">
           <Image src={LORE_TAB_ICON} alt="icon" />
           <h6 className="ml-2 tracking-[3.5px] font-medium whiteOpacityColor text-sm">
@@ -30,12 +36,12 @@ function Missions() {
               <li
                 key={mission.id}
                 className={`w-[330px] h-[470px] relative flex justify-center items-center rounded-xl overflow-hidden ${
-                  mission.status === "incomplete"
-                    ? "cursor-pointer"
+                  mission.status === MissionStatus.Incomplete
+                    ? "cursor-pointer missionHover"
                     : "opacity-[50%] cursor-not-allowed"
                 }`}
                 onClick={() =>
-                  mission.status === "incomplete" &&
+                  mission.status === MissionStatus.Incomplete &&
                   handleMissionClick(mission.id)
                 }
               >
@@ -52,7 +58,14 @@ function Missions() {
                   className="w-full h-full object-cover absolute top-0 right-0 -z-10"
                 />
                 <CaretRightOutlined
-                  style={{ color: "white" }}
+                  style={{
+                    color:
+                      mission.status == MissionStatus.Incomplete
+                        ? "white"
+                        : mission.status == MissionStatus.Completed
+                        ? "green"
+                        : "#A32F0B",
+                  }}
                   className="absolute top-8 left-7"
                 />
                 <div className="border-2 border-[rgba(255,255,255,0.1)] w-[96%] h-[97.2%] rounded-xl flex flex-col items-start justify-end">
@@ -61,30 +74,30 @@ function Missions() {
                       {mission.category}
                     </h5>
                     <div className="w-full h-[2px] my-4 bg-[#FFFFFF] opacity-[5%]"></div>
-                    <p className="uppercase text-white bebasNeue-font font-bold text-[22px] tracking-[.5px]">
+                    <p className="uppercase text-white bebasNeue-font font-bold text-[33px] tracking-[2px]">
                       {mission.title}
                     </p>
                     <div className="flex mt-3 mb-6">
                       <CaretRightOutlined
                         style={{
                           color:
-                            mission.status == "incomplete"
+                            mission.status == MissionStatus.Incomplete
                               ? "white"
-                              : mission.status == "completed"
+                              : mission.status == MissionStatus.Completed
                               ? "green"
                               : "#A32F0B",
                         }}
                       />
                       <h6
                         className={`font-bold text-[13px] ${
-                          mission.status == "incomplete"
+                          mission.status == MissionStatus.Incomplete
                             ? "whiteOpacityColor"
-                            : mission.status === "completed"
+                            : mission.status === MissionStatus.Completed
                             ? "text-[green] uppercase"
                             : "text-[#A32F0B] uppercase"
                         } tracking-[3px] ml-2`}
                       >
-                        {mission.status == "incomplete"
+                        {mission.status == MissionStatus.Incomplete
                           ? mission.type
                           : mission.status}
                       </h6>
@@ -97,12 +110,15 @@ function Missions() {
         </ul>
         {missionsLength != missions.length && (
           <div className="w-full flex items-center justify-center">
-            <button
-              onClick={() => setMissionsLength(missionsLength + 4)}
-              className="rounded-2xl border border-[#3A3A3A] uppercase font-bold text-[17px] tracking-[2px] bg-[#0A0A0A] text-white w-fit py-4 px-10 mt-4"
-            >
-              Learn More...
-            </button>
+            <div className="relative w-[250px] h-[60px] mt-4 z-30">
+              <button
+                onClick={() => setMissionsLength(missionsLength + 4)}
+                className="btn_clip_path uppercase absolute top-0 right-0 font-bold text-[17px] tracking-[2px] bg-[#0A0A0A] text-white w-full h-full z-20"
+              >
+                Learn More...
+              </button>
+              <div className="btn_clip_path bg-[#3A3A3A] btn_btn_div absolute top-[-2px] left-[-2px] -z-20"></div>
+            </div>
           </div>
         )}
       </div>

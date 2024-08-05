@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import "@/styles/homePage.css";
 import LOGO from "/public/assets/images/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -26,10 +25,10 @@ function Header() {
         } md:flex items-center md:static`}
       >
         <div className="flex flex-col md:mr-1 lg:mr-3">
-          <h4 className="uppercase font-light tracking-[3px] text-[12px] lg:text-base whiteOpacityColor">
+          <h4 className="uppercase font-light tracking-[3px] text-[15px] lg:text-lg whiteOpacityColor">
             codeBreaker
           </h4>
-          <h6 className="uppercase font-normal text-[15px] lg:text-[20px] tracking-[3px] text-white">
+          <h6 className="uppercase font-normal text-[17px] lg:text-[20px] tracking-[3px] text-white">
             0x23k...4534
           </h6>
         </div>
@@ -54,21 +53,30 @@ function Header() {
         <ul
           className={`${
             menuOpen && "flex flex-col gap-6 my-10"
-          } md:flex md:flex-row md:gap-0 md:my-0 items-center justify-center uppercase text-[#FFFFFF] font-medium text-[11px] lg:text-sm tracking-[3px] nav_links`}
+          } md:flex md:flex-row md:gap-0 md:my-0 items-center justify-center uppercase text-[#FFFFFF] font-bold text-[11px] lg:text-sm tracking-[3px] nav_links`}
         >
           <li className={isRootPath}>
-            {isRootPath && (
-              <span className="text-2xl mr-3 text-shadow">{"//"}</span>
-            )}
+            <span
+              className={`text-2xl mr-3 text-shadow ${
+                isRootPath ? "inline-block" : "hidden"
+              }`}
+            >
+              {"//"}
+            </span>
             <Link href="/">MISSIONS</Link>
           </li>
           <li className={isLeaderBoard}>
-            {isLeaderBoard && (
-              <span className="text-2xl mr-3 text-shadow">{"//"}</span>
-            )}
+            <span
+              className={`text-2xl mr-3 text-shadow ${
+                isLeaderBoard ? "inline-block" : "hidden"
+              }`}
+            >
+              {"//"}
+            </span>
             <Link href="/leaderboard">LEADERBOARD</Link>
           </li>
           <li>
+            <span className="text-2xl hidden mr-3 text-shadow">{"//"}</span>
             <Link href="#">STAKING</Link>
           </li>
         </ul>
@@ -97,7 +105,7 @@ function Header() {
           <div
             className={`hidden md:block absolute top-[55px] lg:top-[65px] w-full ${
               isRootPath
-                ? "left-[-4.5rem] lg:left-[-7rem] xl:left-[-5rem] 2xl:left-[-2.5rem]"
+                ? "left-[-4.5rem] lg:left-[-7rem] xl:left-[-4rem] 2xl:left-[-2.5rem]"
                 : "left-[-3.8rem] lg:left-[-5.5rem]"
             }`}
           >
